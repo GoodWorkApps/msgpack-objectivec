@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "MessagePack.h"
 
 @interface MessagePackTests : XCTestCase
 
@@ -26,9 +27,10 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testMessagePack
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertNotNil([MessagePackPacker pack:@{}]);
+    XCTAssertNotNil([@{} messagePack]);
 }
 
 @end

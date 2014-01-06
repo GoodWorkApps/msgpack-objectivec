@@ -9,13 +9,23 @@
 /* Begin PBXBuildFile section */
 		A90EAEA4187A4CBD003289F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90EAEA3187A4CBD003289F1 /* Foundation.framework */; };
 		A90EAEA9187A4CBD003289F1 /* MessagePack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A90EAEA8187A4CBD003289F1 /* MessagePack.h */; };
-		A90EAEAB187A4CBD003289F1 /* MessagePack.m in Sources */ = {isa = PBXBuildFile; fileRef = A90EAEAA187A4CBD003289F1 /* MessagePack.m */; };
 		A90EAEB2187A4CBD003289F1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90EAEB1187A4CBD003289F1 /* XCTest.framework */; };
 		A90EAEB3187A4CBD003289F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90EAEA3187A4CBD003289F1 /* Foundation.framework */; };
 		A90EAEB5187A4CBD003289F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90EAEB4187A4CBD003289F1 /* UIKit.framework */; };
 		A90EAEB8187A4CBD003289F1 /* libMessagePack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A90EAEA0187A4CBD003289F1 /* libMessagePack.a */; };
 		A90EAEBE187A4CBD003289F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A90EAEBC187A4CBD003289F1 /* InfoPlist.strings */; };
 		A90EAEC0187A4CBD003289F1 /* MessagePackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A90EAEBF187A4CBD003289F1 /* MessagePackTests.m */; };
+		A90EAED5187A51E9003289F1 /* MessagePackPacker.m in Sources */ = {isa = PBXBuildFile; fileRef = A90EAECA187A51E9003289F1 /* MessagePackPacker.m */; };
+		A90EAED6187A51E9003289F1 /* MessagePackParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A90EAECC187A51E9003289F1 /* MessagePackParser.m */; };
+		A90EAED7187A51E9003289F1 /* MessagePackParser+Streaming.m in Sources */ = {isa = PBXBuildFile; fileRef = A90EAECE187A51E9003289F1 /* MessagePackParser+Streaming.m */; };
+		A90EAED8187A51E9003289F1 /* NSArray+MessagePack.m in Sources */ = {isa = PBXBuildFile; fileRef = A90EAED0187A51E9003289F1 /* NSArray+MessagePack.m */; };
+		A90EAED9187A51E9003289F1 /* NSData+MessagePack.m in Sources */ = {isa = PBXBuildFile; fileRef = A90EAED2187A51E9003289F1 /* NSData+MessagePack.m */; };
+		A90EAEDA187A51E9003289F1 /* NSDictionary+MessagePack.m in Sources */ = {isa = PBXBuildFile; fileRef = A90EAED4187A51E9003289F1 /* NSDictionary+MessagePack.m */; };
+		A90EAEF0187A51FA003289F1 /* objectc.c in Sources */ = {isa = PBXBuildFile; fileRef = A90EAEEB187A51FA003289F1 /* objectc.c */; };
+		A90EAEF1187A51FA003289F1 /* unpack.c in Sources */ = {isa = PBXBuildFile; fileRef = A90EAEEC187A51FA003289F1 /* unpack.c */; };
+		A90EAEF2187A51FA003289F1 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = A90EAEED187A51FA003289F1 /* version.c */; };
+		A90EAEF3187A51FA003289F1 /* vrefbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = A90EAEEE187A51FA003289F1 /* vrefbuffer.c */; };
+		A90EAEF4187A51FA003289F1 /* zone.c in Sources */ = {isa = PBXBuildFile; fileRef = A90EAEEF187A51FA003289F1 /* zone.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +56,43 @@
 		A90EAEA3187A4CBD003289F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A90EAEA7187A4CBD003289F1 /* MessagePack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessagePack-Prefix.pch"; sourceTree = "<group>"; };
 		A90EAEA8187A4CBD003289F1 /* MessagePack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagePack.h; sourceTree = "<group>"; };
-		A90EAEAA187A4CBD003289F1 /* MessagePack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagePack.m; sourceTree = "<group>"; };
 		A90EAEB0187A4CBD003289F1 /* MessagePackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessagePackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90EAEB1187A4CBD003289F1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A90EAEB4187A4CBD003289F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		A90EAEBB187A4CBD003289F1 /* MessagePackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessagePackTests-Info.plist"; sourceTree = "<group>"; };
 		A90EAEBD187A4CBD003289F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A90EAEBF187A4CBD003289F1 /* MessagePackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagePackTests.m; sourceTree = "<group>"; };
+		A90EAEC9187A51E9003289F1 /* MessagePackPacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePackPacker.h; sourceTree = "<group>"; };
+		A90EAECA187A51E9003289F1 /* MessagePackPacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagePackPacker.m; sourceTree = "<group>"; };
+		A90EAECB187A51E9003289F1 /* MessagePackParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePackParser.h; sourceTree = "<group>"; };
+		A90EAECC187A51E9003289F1 /* MessagePackParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagePackParser.m; sourceTree = "<group>"; };
+		A90EAECD187A51E9003289F1 /* MessagePackParser+Streaming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MessagePackParser+Streaming.h"; sourceTree = "<group>"; };
+		A90EAECE187A51E9003289F1 /* MessagePackParser+Streaming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MessagePackParser+Streaming.m"; sourceTree = "<group>"; };
+		A90EAECF187A51E9003289F1 /* NSArray+MessagePack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MessagePack.h"; sourceTree = "<group>"; };
+		A90EAED0187A51E9003289F1 /* NSArray+MessagePack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MessagePack.m"; sourceTree = "<group>"; };
+		A90EAED1187A51E9003289F1 /* NSData+MessagePack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MessagePack.h"; sourceTree = "<group>"; };
+		A90EAED2187A51E9003289F1 /* NSData+MessagePack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MessagePack.m"; sourceTree = "<group>"; };
+		A90EAED3187A51E9003289F1 /* NSDictionary+MessagePack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MessagePack.h"; sourceTree = "<group>"; };
+		A90EAED4187A51E9003289F1 /* NSDictionary+MessagePack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MessagePack.m"; sourceTree = "<group>"; };
+		A90EAEDD187A51FA003289F1 /* object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = object.h; sourceTree = "<group>"; };
+		A90EAEDE187A51FA003289F1 /* pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pack.h; sourceTree = "<group>"; };
+		A90EAEDF187A51FA003289F1 /* pack_define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pack_define.h; sourceTree = "<group>"; };
+		A90EAEE0187A51FA003289F1 /* pack_template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pack_template.h; sourceTree = "<group>"; };
+		A90EAEE1187A51FA003289F1 /* sbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sbuffer.h; sourceTree = "<group>"; };
+		A90EAEE2187A51FA003289F1 /* sysdep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysdep.h; sourceTree = "<group>"; };
+		A90EAEE3187A51FA003289F1 /* unpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unpack.h; sourceTree = "<group>"; };
+		A90EAEE4187A51FA003289F1 /* unpack_define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unpack_define.h; sourceTree = "<group>"; };
+		A90EAEE5187A51FA003289F1 /* unpack_template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unpack_template.h; sourceTree = "<group>"; };
+		A90EAEE6187A51FA003289F1 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		A90EAEE7187A51FA003289F1 /* vrefbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vrefbuffer.h; sourceTree = "<group>"; };
+		A90EAEE8187A51FA003289F1 /* zbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbuffer.h; sourceTree = "<group>"; };
+		A90EAEE9187A51FA003289F1 /* zone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zone.h; sourceTree = "<group>"; };
+		A90EAEEA187A51FA003289F1 /* msgpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msgpack.h; sourceTree = "<group>"; };
+		A90EAEEB187A51FA003289F1 /* objectc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objectc.c; sourceTree = "<group>"; };
+		A90EAEEC187A51FA003289F1 /* unpack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unpack.c; sourceTree = "<group>"; };
+		A90EAEED187A51FA003289F1 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = version.c; sourceTree = "<group>"; };
+		A90EAEEE187A51FA003289F1 /* vrefbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vrefbuffer.c; sourceTree = "<group>"; };
+		A90EAEEF187A51FA003289F1 /* zone.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zone.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +121,7 @@
 		A90EAE97187A4CBD003289F1 = {
 			isa = PBXGroup;
 			children = (
+				A90EAEDB187A51FA003289F1 /* msgpack_src */,
 				A90EAEA5187A4CBD003289F1 /* MessagePack */,
 				A90EAEB9187A4CBD003289F1 /* MessagePackTests */,
 				A90EAEA2187A4CBD003289F1 /* Frameworks */,
@@ -110,8 +151,19 @@
 		A90EAEA5187A4CBD003289F1 /* MessagePack */ = {
 			isa = PBXGroup;
 			children = (
+				A90EAEC9187A51E9003289F1 /* MessagePackPacker.h */,
+				A90EAECA187A51E9003289F1 /* MessagePackPacker.m */,
+				A90EAECB187A51E9003289F1 /* MessagePackParser.h */,
+				A90EAECC187A51E9003289F1 /* MessagePackParser.m */,
+				A90EAECD187A51E9003289F1 /* MessagePackParser+Streaming.h */,
+				A90EAECE187A51E9003289F1 /* MessagePackParser+Streaming.m */,
+				A90EAECF187A51E9003289F1 /* NSArray+MessagePack.h */,
+				A90EAED0187A51E9003289F1 /* NSArray+MessagePack.m */,
+				A90EAED1187A51E9003289F1 /* NSData+MessagePack.h */,
+				A90EAED2187A51E9003289F1 /* NSData+MessagePack.m */,
+				A90EAED3187A51E9003289F1 /* NSDictionary+MessagePack.h */,
+				A90EAED4187A51E9003289F1 /* NSDictionary+MessagePack.m */,
 				A90EAEA8187A4CBD003289F1 /* MessagePack.h */,
-				A90EAEAA187A4CBD003289F1 /* MessagePack.m */,
 				A90EAEA6187A4CBD003289F1 /* Supporting Files */,
 			);
 			path = MessagePack;
@@ -141,6 +193,40 @@
 				A90EAEBC187A4CBD003289F1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A90EAEDB187A51FA003289F1 /* msgpack_src */ = {
+			isa = PBXGroup;
+			children = (
+				A90EAEDC187A51FA003289F1 /* msgpack */,
+				A90EAEEA187A51FA003289F1 /* msgpack.h */,
+				A90EAEEB187A51FA003289F1 /* objectc.c */,
+				A90EAEEC187A51FA003289F1 /* unpack.c */,
+				A90EAEED187A51FA003289F1 /* version.c */,
+				A90EAEEE187A51FA003289F1 /* vrefbuffer.c */,
+				A90EAEEF187A51FA003289F1 /* zone.c */,
+			);
+			path = msgpack_src;
+			sourceTree = "<group>";
+		};
+		A90EAEDC187A51FA003289F1 /* msgpack */ = {
+			isa = PBXGroup;
+			children = (
+				A90EAEDD187A51FA003289F1 /* object.h */,
+				A90EAEDE187A51FA003289F1 /* pack.h */,
+				A90EAEDF187A51FA003289F1 /* pack_define.h */,
+				A90EAEE0187A51FA003289F1 /* pack_template.h */,
+				A90EAEE1187A51FA003289F1 /* sbuffer.h */,
+				A90EAEE2187A51FA003289F1 /* sysdep.h */,
+				A90EAEE3187A51FA003289F1 /* unpack.h */,
+				A90EAEE4187A51FA003289F1 /* unpack_define.h */,
+				A90EAEE5187A51FA003289F1 /* unpack_template.h */,
+				A90EAEE6187A51FA003289F1 /* version.h */,
+				A90EAEE7187A51FA003289F1 /* vrefbuffer.h */,
+				A90EAEE8187A51FA003289F1 /* zbuffer.h */,
+				A90EAEE9187A51FA003289F1 /* zone.h */,
+			);
+			path = msgpack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +310,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A90EAEAB187A4CBD003289F1 /* MessagePack.m in Sources */,
+				A90EAEF2187A51FA003289F1 /* version.c in Sources */,
+				A90EAED6187A51E9003289F1 /* MessagePackParser.m in Sources */,
+				A90EAED8187A51E9003289F1 /* NSArray+MessagePack.m in Sources */,
+				A90EAEF4187A51FA003289F1 /* zone.c in Sources */,
+				A90EAED5187A51E9003289F1 /* MessagePackPacker.m in Sources */,
+				A90EAEF1187A51FA003289F1 /* unpack.c in Sources */,
+				A90EAED7187A51E9003289F1 /* MessagePackParser+Streaming.m in Sources */,
+				A90EAEF0187A51FA003289F1 /* objectc.c in Sources */,
+				A90EAEDA187A51E9003289F1 /* NSDictionary+MessagePack.m in Sources */,
+				A90EAED9187A51E9003289F1 /* NSData+MessagePack.m in Sources */,
+				A90EAEF3187A51FA003289F1 /* vrefbuffer.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +389,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/msgpack_src";
 			};
 			name = Debug;
 		};
@@ -324,6 +421,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/msgpack_src";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -337,6 +435,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/msgpack_src";
 			};
 			name = Debug;
 		};
@@ -349,6 +448,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/msgpack_src";
 			};
 			name = Release;
 		};
@@ -409,6 +509,7 @@
 				A90EAEC5187A4CBD003289F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A90EAEC6187A4CBD003289F1 /* Build configuration list for PBXNativeTarget "MessagePackTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +518,7 @@
 				A90EAEC8187A4CBD003289F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
