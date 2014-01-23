@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MessagePack"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "MessagePack"
 
   s.description  = <<-DESC
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.author             = { "dictav" => "dictav@gmail.com" }
   s.social_media_url = "http://twitter.com/dictav"
 
-  s.source       = { :git => "https://github.com/dictav/msgpack-objectivec.git", :tag => "0.0.1", :submodules => true }
+  s.source       = { :git => "https://github.com/dictav/msgpack-objectivec.git", :tag => "0.0.2" }
   s.source_files  = ['MessagePack/*.{h,m}', 'msgpack_src/*', 'msgpack_src/msgpack/*']
 
   s.header_mappings_dir = 'msgpack'
