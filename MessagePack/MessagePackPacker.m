@@ -75,6 +75,11 @@
 		int len = strlen(str);
 		msgpack_pack_raw(pk, len);
 		msgpack_pack_raw_body(pk, str, len);
+	} else if ([obj isKindOfClass:[NSData class]]) {
+		const char *bytes = [obj bytes];
+		int len = [obj length];
+		msgpack_pack_raw(pk, len);
+		msgpack_pack_raw_body(pk, bytes, len);
 	} else if ([obj isKindOfClass:[NSNumber class]]) {
 		[self packNumber:obj into:pk];
 	} else if (obj==[NSNull null]) {

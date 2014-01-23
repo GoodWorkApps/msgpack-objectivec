@@ -26,7 +26,16 @@
             return [[NSNumber alloc] initWithDouble:obj.via.dec];
             break;
         case MSGPACK_OBJECT_RAW:
-            return [[NSString alloc] initWithBytes:obj.via.raw.ptr length:obj.via.raw.size encoding:NSUTF8StringEncoding];
+        {
+            NSData *raw = [[NSData alloc] initWithBytes:obj.via.raw.ptr length:obj.via.raw.size];
+            NSString *str = [[NSString alloc] initWithData:raw encoding:NSUTF8StringEncoding];
+            if (str) {
+                return str;
+            } else {
+                return raw;
+            }
+            
+        }
             break;
         case MSGPACK_OBJECT_ARRAY:
         {
