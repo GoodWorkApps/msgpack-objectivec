@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 #import "MessagePack.h"
+#import "MessagePackParser+Streaming.h"
+#import "MessagePackPacker+Streaming.h"
 
 @interface MessagePackTests : XCTestCase
 
@@ -31,6 +33,28 @@
 {
     XCTAssertNotNil([MessagePackPacker pack:@{}]);
     XCTAssertNotNil([@{} messagePack]);
+}
+
+- (void)testMessagePackStreaming
+{
+    NSArray *arr = @[@"1", @"2", @[@"3", @(4), [NSNull null]]];
+
+    MessagePackPacker *packer = [[MessagePackPacker alloc] init];
+    for (id obj in arr) {
+        [packer push:obj];
+    }
+
+    MessagePackParser *parser = [[MessagePackParser alloc] init];
+    [parser feed:[packer data]];
+
+    NSMutableArray *foo = [NSMutableArray arrayWithCapacity:10];
+    id obj = [parser next];
+    while (obj) {
+        [foo addObject:obj];
+        obj = [parser next];
+    }
+
+    XCTAssertEqualObjects(arr, foo, @"arrays should be equal in the end");
 }
 
 @end

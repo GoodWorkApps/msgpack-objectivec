@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188148DD378D568B2D328069 /* MessagePackPacker+Streaming.m in Sources */ = {isa = PBXBuildFile; fileRef = 18814D292ECA003C851B4833 /* MessagePackPacker+Streaming.m */; };
+		18814A1FC8FD7AD0FE611809 /* MessagePackPacker+Streaming.m in Sources */ = {isa = PBXBuildFile; fileRef = 18814D292ECA003C851B4833 /* MessagePackPacker+Streaming.m */; };
 		A90EAEA4187A4CBD003289F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90EAEA3187A4CBD003289F1 /* Foundation.framework */; };
 		A90EAEA9187A4CBD003289F1 /* MessagePack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A90EAEA8187A4CBD003289F1 /* MessagePack.h */; };
 		A90EAEB2187A4CBD003289F1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90EAEB1187A4CBD003289F1 /* XCTest.framework */; };
@@ -52,6 +54,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		188145D122CE2412056C3704 /* MessagePackPacker+Streaming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MessagePackPacker+Streaming.h"; sourceTree = "<group>"; };
+		18814D292ECA003C851B4833 /* MessagePackPacker+Streaming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MessagePackPacker+Streaming.m"; sourceTree = "<group>"; };
 		A90EAEA0187A4CBD003289F1 /* libMessagePack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMessagePack.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90EAEA3187A4CBD003289F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A90EAEA7187A4CBD003289F1 /* MessagePack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessagePack-Prefix.pch"; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 				A90EAED4187A51E9003289F1 /* NSDictionary+MessagePack.m */,
 				A90EAEA8187A4CBD003289F1 /* MessagePack.h */,
 				A90EAEA6187A4CBD003289F1 /* Supporting Files */,
+				188145D122CE2412056C3704 /* MessagePackPacker+Streaming.h */,
+				18814D292ECA003C851B4833 /* MessagePackPacker+Streaming.m */,
 			);
 			path = MessagePack;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 				A90EAEDA187A51E9003289F1 /* NSDictionary+MessagePack.m in Sources */,
 				A90EAED9187A51E9003289F1 /* NSData+MessagePack.m in Sources */,
 				A90EAEF3187A51FA003289F1 /* vrefbuffer.c in Sources */,
+				18814A1FC8FD7AD0FE611809 /* MessagePackPacker+Streaming.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A90EAEC0187A4CBD003289F1 /* MessagePackTests.m in Sources */,
+				188148DD378D568B2D328069 /* MessagePackPacker+Streaming.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
