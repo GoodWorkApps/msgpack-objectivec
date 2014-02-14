@@ -14,6 +14,21 @@ Parsing Usage
 	NSData* myData = ...
 	NSDictionary* parsed = [myData messagePackParse];
 	NSLog(@"%@", [parsed description]);
+	
+Streaming parsing usage
+---
+
+	#import "MessagePack.h"
+	...
+	NSData* myData = ...
+	MessagePackParser *parser = [[MessagePackParser alloc] init];
+	[parser feed:data];
+	id obj = [parser next];
+	while (obj) {
+		... do something with obj ...
+		obj = [parser next];
+	}
+
 
 Packing Usage
 ----
@@ -22,6 +37,23 @@ Packing Usage
     ..
     NSData* packed = [someArray messagePack];
     NSData* packed = [someDictionary messagePack];
+    
+Push packing usage
+---
+	#import "MessagePack.h"
+	..
+	MessagePackPacker *packer = [[MessagePackParser alloc] init];
+	// now push some objects
+	[packer push:obj1];
+	...
+	[packer push:objN];
+	
+	// get the packed data
+	NSData *packedData = [packer data];
+	
+	// optionally reset packer
+	[packer reset];
+	
 
 Authors
 -------
@@ -29,6 +61,7 @@ Authors
 * Sugendran Ganess
 * Chris Hulbert
 * Bugfixes by Matzo: https://github.com/Matzo
+* Push packing by egv: https://github.com/egv
 
 License
 -------
