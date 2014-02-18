@@ -768,6 +768,23 @@ msgpack_pack_inline_func(_raw)(msgpack_pack_user x, size_t l)
 	}
 }
 
+msgpack_pack_inline_func(_bin)(msgpack_pack_user x, size_t l)
+{
+    if(l < 256) {
+        unsigned char buf[2];
+        buf[0] = 0xc4; buf[1] = (unsigned char)l;
+        msgpack_pack_append_buffer(x, buf, 2);
+    } else if(l < 65536) {
+        unsigned char buf[3];
+        buf[0] = 0xc5; _msgpack_store16(&buf[1], (uint16_t)l);
+        msgpack_pack_append_buffer(x, buf, 3);
+    } else {
+        unsigned char buf[5];
+        buf[0] = 0xc6; _msgpack_store32(&buf[1], (uint32_t)l);
+        msgpack_pack_append_buffer(x, buf, 5);
+    }
+}
+
 msgpack_pack_inline_func(_raw_body)(msgpack_pack_user x, const void* b, size_t l)
 {
 	msgpack_pack_append_buffer(x, (const unsigned char*)b, l);
