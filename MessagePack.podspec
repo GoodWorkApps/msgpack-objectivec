@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.author             = { "egv" => "g@goodworkapps.com" }
   s.social_media_url = "http://twitter.com/gevstratov"
 
-  s.source       = { :git => "https://github.com/GoodWorkApps/msgpack-objectivec.git", :tag => "0.1.0" }
+  s.source       = { :git => "https://github.com/GoodWorkApps/msgpack-objectivec.git", :tag => "0.2" }
   s.source_files  = ['MessagePack/*.{h,m}', 'msgpack_src/*', 'msgpack_src/msgpack/*']
 
   s.header_mappings_dir = 'msgpack'
